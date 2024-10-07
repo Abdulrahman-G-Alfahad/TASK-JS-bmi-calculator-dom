@@ -8,7 +8,12 @@ function calculateBMI() {
   console.table({ age, weight, height, male, female });
 
   // You are going to write the code here before the curly braces 👇🏻
-  let heightByMeter = height/100;
+  let heightByMeter = height / 100;
   let bmi = weight / (heightByMeter * heightByMeter);
-  alert(bmi);
+  alert(`BMI is ${bmi}`);
+
+  if( bmi < 18.5) alert("Underweight");
+  else if( bmi > 18.5 && bmi < 24.9) alert("Healthy Weight");
+  else if( bmi > 25 && bmi < 29.9) alert("Overweight");
+  else if (bmi > 30) alert("Obese");
 }
